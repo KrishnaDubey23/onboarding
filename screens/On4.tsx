@@ -42,7 +42,7 @@ export default function On4({ onSwipeLeft, onSwipeRight }: On4Props) {
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <LinearGradient
-        colors={['#6B5EE4', '#3E4DB8']}
+        colors={['#FE552B', '#FE552B']}
         style={styles.container}
         start={{ x: 0.5, y: 0 }}
         end={{ x: 0.5, y: 1 }}

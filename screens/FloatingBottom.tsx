@@ -16,14 +16,12 @@ export default function FloatingBottom({ page, totalPages }: FloatingBottomProps
           <View key={idx} style={[styles.dot, { opacity: page === idx ? 1 : 0.4 }]} />
         ))}
       </View>
-      <TouchableOpacity style={styles.emailButton}>
-        <Image source={{ uri: 'https://img.icons8.com/ios-filled/50/000000/new-post.png' }} style={styles.emailIcon} />
-        <Text style={styles.emailButtonText}>Continue with E-mail</Text>
-      </TouchableOpacity>
-      <View style={styles.socialRow}>
-        <TouchableOpacity style={[styles.socialButton, { flex: 1 }]}>
-          <Image source={{ uri: 'https://img.icons8.com/color/48/000000/google-logo.png' }} style={styles.socialIcon} />
-          <Text style={styles.socialText}>Google</Text>
+      <View style={styles.authButtons}>
+        <TouchableOpacity style={styles.loginButton}>
+          <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.signupButton}>
+          <Text style={styles.signupButtonText}>Signup</Text>
         </TouchableOpacity>
       </View>
       <Text style={styles.termsText}>
@@ -55,54 +53,38 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginHorizontal: 6,
   },
-  emailButton: {
+  authButtons: {
+    width: '100%',
+    gap: 4,
+    marginBottom: 8,
+  },
+  loginButton: {
     backgroundColor: '#fff',
     borderRadius: 24,
     paddingVertical: 14,
     width: '100%',
     alignItems: 'center',
-    marginBottom: 18,
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  emailIcon: {
-    width: 18,
-    height: 18,
-    marginRight: 8,
-    resizeMode: 'contain',
-  },
-  emailButtonText: {
+  loginButtonText: {
     color: '#222',
     fontWeight: 'bold',
     fontSize: 16,
   },
-  socialRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-    marginBottom: 16,
-  },
-  socialButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
+  signupButton: {
+    backgroundColor: '#222',
     borderRadius: 24,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
-    marginHorizontal: 3,
-    flex: 1,
+    paddingVertical: 14,
+    width: '100%',
+    alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'center',
   },
-  socialIcon: {
-    width: 18,
-    height: 18,
-    marginRight: 6,
-    resizeMode: 'contain',
-  },
-  socialText: {
-    color: '#222',
+  signupButtonText: {
+    color: '#fff',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 16,
   },
   termsText: {
     color: '#e0e0e0',

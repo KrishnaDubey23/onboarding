@@ -32,7 +32,7 @@ const DOTS = Array.from({ length: 80 }).map(() => {
 export default function On1() {
   return (
     <LinearGradient
-      colors={['#6B5EE4', '#3E4DB8']}
+      colors={['#FE552B', '#FE552B']}
       style={styles.container}
       start={{ x: 0.5, y: 0 }}
       end={{ x: 0.5, y: 1 }}
